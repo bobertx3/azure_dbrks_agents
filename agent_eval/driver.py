@@ -57,7 +57,7 @@
 # MAGIC ############################################
 # MAGIC # Define your LLM endpoint and system prompt
 # MAGIC ############################################
-# MAGIC LLM_ENDPOINT_NAME = "databricks-gpt-oss-20b"
+# MAGIC LLM_ENDPOINT_NAME = "databricks-meta-llama-3-3-70b-instruct"
 # MAGIC
 # MAGIC SYSTEM_PROMPT = """You are the Supply Chain Agent
 # MAGIC
@@ -81,7 +81,7 @@
 # MAGIC **Tools:**  
 # MAGIC - `get_supplier_details`  
 # MAGIC - `get_backup_inventory`  
-# MAGIC - `search_supplier_sops`
+# MAGIC - `supplier_sops_vs_index`
 # MAGIC
 # MAGIC ---
 # MAGIC
@@ -89,7 +89,7 @@
 # MAGIC - Be concise, factual, and action-oriented. Always explain *why* using numeric evidence (temperature gaps, limits, etc.).  
 # MAGIC - Never output raw tool results without a professional summary.  
 # MAGIC - Do not fabricate data. If required data (ETA, destination, or temperature values) is missing, mark `risk_level = INSUFFICIENT_DATA` and list missing fields.  
-# MAGIC - If `search_supplier_sops` returns nothing, state “No relevant SOP found.”  
+# MAGIC - If `supplier_sops_vs_index` returns nothing, state “No relevant SOP found.”  
 # MAGIC - Default to °F; if a tool returns °C, convert and show both once.
 # MAGIC
 # MAGIC ---
@@ -267,56 +267,6 @@
 # MAGIC mlflow.openai.autolog()
 # MAGIC AGENT = ToolCallingAgent(llm_endpoint=LLM_ENDPOINT_NAME, tools=TOOL_INFOS)
 # MAGIC mlflow.models.set_model(AGENT)
-
-# COMMAND ----------
-
-# MAGIC %sql
-# MAGIC DESCRIBE FUNCTION EXTENDED workshop1.supply_chain.temp_gap;
-
-# COMMAND ----------
-
-import json
-from agent import TOOL_INFOS, uc_toolkit, VECTOR_SEARCH_TOOLS
-
-def tools_with_pattern(tool_infos):
-    bad = []
-    for t in tool_infos:
-        blob = json.dumps(t.spec)
-        if '"pattern"' in blob or '"patternProperties"' in blob:
-            bad.append(t.name)
-    return bad
-
-print("TOOL_INFOS with pattern:", tools_with_pattern(TOOL_INFOS))
-
-# If you want to check the *raw* specs before your create_tool_info wrapper:
-raw_specs = uc_toolkit.tools + [vs.tool for vs in VECTOR_SEARCH_TOOLS]
-print("RAW UC/VS count:", len(raw_specs))
-print("RAW offenders:",
-      [s["function"]["name"] for s in raw_specs
-       if '"pattern"' in json.dumps(s) or '"patternProperties"' in json.dumps(s)])
-
-# COMMAND ----------
-
-def find_pattern_paths(obj, path=()):
-    hits = []
-    if isinstance(obj, dict):
-        for k, v in obj.items():
-            if k in ("pattern", "patternProperties"):
-                hits.append((".".join(path + (k,)), v))
-            hits.extend(find_pattern_paths(v, path + (k,)))
-    elif isinstance(obj, list):
-        for i, v in enumerate(obj):
-            hits.extend(find_pattern_paths(v, path + (f"[{i}]",)))
-    return hits
-
-for t in TOOL_INFOS:
-    paths = find_pattern_paths(t.spec)
-    if paths:
-        print(f"\n❌ Tool: {t.name}")
-        for p, v in paths:
-            # print only the first 120 chars of the value to keep it readable
-            sv = repr(v)
-            print(f"   - {p} => {sv[:120] + ('...' if len(sv)>120 else '')}")
 
 # COMMAND ----------
 

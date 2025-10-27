@@ -24,7 +24,7 @@ from unitycatalog.ai.core.base import get_uc_function_client
 ############################################
 # Define your LLM endpoint and system prompt
 ############################################
-LLM_ENDPOINT_NAME = "databricks-gpt-oss-20b"
+LLM_ENDPOINT_NAME = "databricks-meta-llama-3-3-70b-instruct"
 
 SYSTEM_PROMPT = """You are the Supply Chain Agent
 
@@ -48,7 +48,7 @@ Ensure temperature-sensitive MedTech shipments are delivered safely and on time 
 **Tools:**  
 - `get_supplier_details`  
 - `get_backup_inventory`  
-- `search_supplier_sops`
+- `supplier_sops_vs_index`
 
 ---
 
@@ -56,7 +56,7 @@ Ensure temperature-sensitive MedTech shipments are delivered safely and on time 
 - Be concise, factual, and action-oriented. Always explain *why* using numeric evidence (temperature gaps, limits, etc.).  
 - Never output raw tool results without a professional summary.  
 - Do not fabricate data. If required data (ETA, destination, or temperature values) is missing, mark `risk_level = INSUFFICIENT_DATA` and list missing fields.  
-- If `search_supplier_sops` returns nothing, state “No relevant SOP found.”  
+- If `supplier_sops_vs_index` returns nothing, state “No relevant SOP found.”  
 - Default to °F; if a tool returns °C, convert and show both once.
 
 ---
