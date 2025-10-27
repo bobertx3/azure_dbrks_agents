@@ -1,19 +1,16 @@
 What is in transit to New York City
 
-
 The current temp in new york is 70 degrees, are there any shipments at risk?
-
 
 What are the escalation steps with the supplier?
 
 What is in transit to New York City
 
+What is in transit to Boston
+
 The current temp in New York in 80 degrees. Are there any shipments in-transit that are at risk for spoilage, and if so lookup the escalation steps so I can contact the supplier to resolve the issue. Write me a concise report with scannable bullet points.
 
-
 Check shipments in transit to NYC for heat risk with the current temp of 70
-
-
 
 Check shipments in transit to Philadelphia for heat risk with the current temp of 70
 
