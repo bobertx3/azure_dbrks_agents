@@ -1,0 +1,11 @@
+supplier_id,supplier_name,contact_name,contact_email,phone,tier
+SUP-001,Zimmer Biotech,Laura Nguyen,laura.nguyen@zimmerbio.com,+1-312-555-0100,Tier-1
+SUP-002,MedPro Devices,John Cheng,john.cheng@medpro.com,+1-617-555-0135,Tier-2
+SUP-003,Ortho Dynamics,Alicia Patel,apatel@orthodynamics.com,+1-201-555-0192,Tier-1
+SUP-004,CardioNova,Felix Romero,felix.romero@cardionova.com,+1-602-555-0144,Tier-2
+SUP-005,ValveX Labs,Mei Lin,mei.lin@valvexlabs.com,+1-206-555-0177,Tier-1
+SUP-006,BioMotion,Priya Desai,priya.desai@biomotion.co,+1-305-555-0199,Tier-2
+SUP-007,NeuroPulse,Eric Shaw,eric.shaw@neuropulse.ai,+1-212-555-0111,Tier-3
+SUP-008,SterileWorks,Hannah Price,h.price@sterileworks.com,+1-415-555-0162,Tier-2
+SUP-009,OrthoCore,Dylan Kim,d.kim@orthocore.com,+1-708-555-0133,Tier-1
+SUP-010,MedAxis,Sara Park,sara.park@medaxis.io,+1-503-555-0155,Tier-2

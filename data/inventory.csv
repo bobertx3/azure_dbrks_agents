@@ -1,0 +1,11 @@
+site_id,site_name,city,state,product_id,sku,product_name,supplier_id,on_hand_qty,lot_expiry
+SITE-201,New Jersey Hub,Newark,NJ,PROD-0006,IMPL-A21,Hip Implant Set,SUP-009,42,2026-01-15
+SITE-202,Upstate NY DC,Albany,NY,PROD-0008,VALVE-E11,Aortic Valve,SUP-005,18,2026-02-01
+SITE-203,Boston MedCenter Warehouse,Boston,MA,PROD-0002,STENT-C13,Cardio Stent Kit,SUP-002,25,2026-03-20
+SITE-204,Denver Surgical Depot,Denver,CO,PROD-0003,CATH-B08,Balloon Catheter,SUP-003,12,2026-01-10
+SITE-205,San Diego Clinical DC,San Diego,CA,PROD-0004,PATCH-D02,Hernia Patch,SUP-004,40,2026-03-05
+SITE-206,Miami Med DC,Miami,FL,PROD-0007,STENT-C13,Cardio Stent Kit,SUP-010,9,2025-12-05
+SITE-207,Seattle Ortho Hub,Seattle,WA,PROD-0008,VALVE-E11,Aortic Valve,SUP-005,7,2026-04-01
+SITE-208,Philadelphia ColdSite,Philadelphia,PA,PROD-0010,IMPL-A21,Hip Implant Set,SUP-001,14,2026-01-25
+SITE-209,Austin Surgical Supply,Austin,TX,PROD-0003,CATH-B08,Balloon Catheter,SUP-003,20,2026-02-02
+SITE-210,Cleveland Care DC,Cleveland,OH,PROD-0002,STENT-C13,Cardio Stent Kit,SUP-002,16,2026-03-20

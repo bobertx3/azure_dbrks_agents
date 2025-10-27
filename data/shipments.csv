@@ -1,0 +1,11 @@
+shipment_id,product_id,sku,product_name,supplier_id,origin,destination,ship_date,eta_date,carrier,status,temperature_max_f,temperature_min_f
+SHP-30001,PROD-0001,IMPL-A21,Hip Implant Set,SUP-001,"Memphis, TN","New York, NY",2025-10-07,2025-10-09,UPS Health,In-Transit,45.68,36.32
+SHP-30002,PROD-0005,VALVE-E11,Aortic Valve,SUP-005,"Seattle, WA","New York, NY",2025-10-06,2025-10-08,FedEx Cold,In-Transit,46.22,35.78
+SHP-30003,PROD-0002,STENT-C13,Cardio Stent Kit,SUP-002,"Chicago, IL","Boston, MA",2025-10-06,2025-10-09,UPS Health,In-Transit,46.58,35.42
+SHP-30004,PROD-0003,CATH-B08,Balloon Catheter,SUP-003,"Dallas, TX","Denver, CO",2025-10-07,2025-10-10,UPS Health,In-Transit,46.04,36.5
+SHP-30005,PROD-0004,PATCH-D02,Hernia Patch,SUP-004,"Phoenix, AZ","San Diego, CA",2025-10-07,2025-10-09,FedEx Cold,Label-Created,44.6,35.6
+SHP-30006,PROD-0006,IMPL-A21,Hip Implant Set,SUP-009,"Cleveland, OH","Atlanta, GA",2025-10-05,2025-10-09,UPS Health,Delayed,46.76,35.6
+SHP-30007,PROD-0007,STENT-C13,Cardio Stent Kit,SUP-010,"Miami, FL","Philadelphia, PA",2025-10-07,2025-10-11,UPS Health,In-Transit,45.32,35.96
+SHP-30008,PROD-0008,VALVE-E11,Aortic Valve,SUP-005,"San Jose, CA","Portland, OR",2025-10-06,2025-10-09,FedEx Cold,In-Transit,45.5,36.14
+SHP-30009,PROD-0009,CATH-B08,Balloon Catheter,SUP-003,"Seattle, WA","Boise, ID",2025-10-07,2025-10-09,UPS Health,In-Transit,45.86,36.32
+SHP-30010,PROD-0010,IMPL-A21,Hip Implant Set,SUP-001,"Memphis, TN","Chicago, IL",2025-10-06,2025-10-08,UPS Health,Delivered,45.14,35.78
