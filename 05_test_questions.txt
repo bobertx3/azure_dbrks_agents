@@ -1,4 +1,13 @@
+Main Questions:
+
+What are the SOPs for Zimmer biotech?
+
 What is in transit to New York City
+
+The current temp in New York in 80 degrees. Are there any shipments in-transit that are at risk for spoilage, and if so lookup the escalation steps so I can contact the supplier to resolve the issue. Write me a concise report with scannable bullet points.
+
+
+More Test Questions:
 
 The current temp in new york is 70 degrees, are there any shipments at risk?
 
