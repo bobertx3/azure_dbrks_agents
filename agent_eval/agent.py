@@ -115,7 +115,7 @@ TOOL_INFOS = []
 
 # You can use UDFs in Unity Catalog as agent tools
 # TODO: Add additional tools
-UC_TOOL_NAMES = ["workshop1.supply_chain.get_shipments", "workshop1.supply_chain.temp_gap", "workshop1.supply_chain.get_supplier_details", "workshop1.supply_chain.get_backup_inventory"]
+UC_TOOL_NAMES = ["workshop.supply_chain.get_shipments", "workshop.supply_chain.temp_gap", "workshop.supply_chain.get_supplier_details", "workshop.supply_chain.get_backup_inventory"]
 
 uc_toolkit = UCFunctionToolkit(function_names=UC_TOOL_NAMES)
 uc_function_client = get_uc_function_client()
@@ -131,7 +131,7 @@ for tool_spec in uc_toolkit.tools:
 VECTOR_SEARCH_TOOLS = []
 VECTOR_SEARCH_TOOLS.append(
         VectorSearchRetrieverTool(
-            index_name="workshop1.supply_chain.supplier_sops_vs_index",
+            index_name="workshop.supply_chain.supplier_sops_vs_index",
             # TODO: specify index description for better agent tool selection
             # tool_description=""
         )
