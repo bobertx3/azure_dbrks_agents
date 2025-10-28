@@ -5,7 +5,7 @@
 4. SELECT LLM_ENDPOINT_NAME = "databricks-meta-llama-3-3-70b-instruct"
 5. ADD TOOLS -> Vector Index and UC Functions (add individually)
 6. Test Agent with 05_test_questions
-7. Create Agent Notebook
+7. Create Agent Notebook (or use the agent_eval folder in this repo)
 8. Update TODOs (including catalog, schema, model name)
 9. In last cell for agent.deploy add scale_to_zero=True
 10. Run Notebook
